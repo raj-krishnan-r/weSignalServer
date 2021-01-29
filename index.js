@@ -7,6 +7,6 @@ app.get('/',(req,res)=>{
 io.on('connection',(socket)=>{
 console.log('a user is connected');
 });
-http.listen(3000,()=>{
+http.listen(3000,'0.0.0.0',()=>{
     console.log('Listening on 3000');
 });
