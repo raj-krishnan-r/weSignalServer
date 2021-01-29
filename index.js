@@ -9,7 +9,13 @@ const io = require('socket.io')(http,{
 });
 
 var userList=[];
-
+app.get('/clearUsers',(req,res)=>{
+    arr.splice(0, userList.length);
+    res.send('Cleared');
+});
+app.get('/usersList',(req,res)=>{
+res.send(JSON.stringify(userList));
+});
 app.get('/',(req,res)=>{
     res.sendFile(__dirname + '/frame.html');
 });
