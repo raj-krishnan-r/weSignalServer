@@ -1,5 +1,6 @@
 const app = require('express')();
 const http=require('http').Server(app);
+const PORT = process.env.PORT || 3000;
 const io = require('socket.io')(http,{
   cors:{
       origin:"*",
@@ -52,6 +53,6 @@ socket.on('ice-candidate',(incpackage)=>{
 });
 });
 
-http.listen(3000,'0.0.0.0',()=>{
-    console.log('Listening on 3000');
+http.listen(PORT,'0.0.0.0',()=>{
+    console.log('Listening on '+PORT);
 });
