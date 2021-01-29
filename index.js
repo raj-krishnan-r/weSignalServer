@@ -53,6 +53,6 @@ socket.on('ice-candidate',(incpackage)=>{
 });
 });
 
-http.listen(PORT,'0.0.0.0',()=>{
+http.listen(PORT,()=>{
     console.log('Listening on '+PORT);
 });
